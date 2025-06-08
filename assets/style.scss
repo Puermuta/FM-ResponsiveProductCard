@@ -1,0 +1,58 @@
+@use 'fonts';
+
+/*Primary colors*/
+$clr-green-500: hsl(158, 36%, 37%);
+$clr-green-700: hsl(158, 42%, 18%);
+
+/*Neutral colors*/
+$clr-black: hsl(212, 21%, 14%);
+$clr-grey: hsl(228, 12%, 48%);
+$clr-cream: hsl(30, 38%, 92%);
+$clr-white: white;
+
+$fsz-s: 0.875rem;
+
+$fw-primary: 500;
+$fw-accent: 700;
+
+$ff-primary: 'Monsterrat', sans-serif;
+$ff-additional: 'Fraunces', serif;
+
+/* CSS-reset */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    align-content: center;
+
+    font-family: $ff-primary;
+    font-size: $fsz-s;
+    font-weight: $fw-primary;
+    color: $clr-grey;
+    letter-spacing: 0;
+    
+    background-color: $clr-cream;
+}
+
+img {
+    display: block;
+}
+
+header {
+    width:
+}
+
