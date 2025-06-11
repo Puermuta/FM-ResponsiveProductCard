@@ -27,7 +27,7 @@ h1, h2, h3, p, ul, ol, li {
 }
 
 html, body {
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -46,4 +46,37 @@ body {
 
 img {
   display: block;
+}
+
+header {
+  width: 21rem;
+  border: 1px solid red;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  overflow: hidden;
+}
+
+.header_illustration {
+  width: 100%;
+}
+
+main {
+  width: 21rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.add_to_cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-block: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 700;
+  color: white;
+  background-color: hsl(158, 36%, 37%);
 }/*# sourceMappingURL=style.css.map */

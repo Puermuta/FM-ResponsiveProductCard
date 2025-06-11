@@ -18,6 +18,11 @@ $fw-accent: 700;
 $ff-primary: 'Monsterrat', sans-serif;
 $ff-additional: 'Fraunces', serif;
 
+$standard-width: 21rem;
+$standard-padding: 1.5rem;
+$standard-border-radius: 0.75rem;
+$button-radius: 0.5rem;
+
 /* CSS-reset */
 *, *::before, *::after{
     box-sizing: border-box;
@@ -29,7 +34,7 @@ h1, h2, h3, p, ul, ol, li {
 }
 
 html, body {
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 body {
@@ -53,6 +58,37 @@ img {
 }
 
 header {
-    width:
+    width: $standard-width;
+    border: 1px solid red;
+    margin-top: 1.5rem;
+    border-radius: $standard-border-radius $standard-border-radius 0 0;
+    overflow: hidden;
 }
 
+.header_illustration {
+    width: 100%;
+}
+
+main {
+    width: $standard-width;
+    background: $clr-white;
+    padding: $standard-padding;
+    border-radius: 0 0 $standard-border-radius $standard-border-radius;
+}
+
+.add_to_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    padding-block: 1rem;
+    width: 100%;
+    border-radius: $button-radius;
+    border: none;
+    
+    font-weight: $fw-accent;
+    color: $clr-white;
+    background-color: $clr-green-500;
+
+}
