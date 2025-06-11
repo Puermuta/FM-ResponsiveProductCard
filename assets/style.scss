@@ -24,7 +24,9 @@ $line-height-primary: 1.5;
 $line-height-additional: 1;
 
 $standard-width: 21rem;
-$standard-padding: 1.4rem;
+$mobile-padding: 1.4rem;
+$desktop-padding: 2rem;
+$desktop-width: 19rem;
 $inbetween-margin: 1rem;
 $standard-border-radius: 0.75rem;
 $button-radius: 0.5rem;
@@ -46,9 +48,10 @@ html, body {
 body {
     margin: 0;
     padding: 0;
-    display: grid;
-    place-items: center;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     font-family: $ff-primary;
     font-size: $fsz-s;
@@ -73,12 +76,15 @@ header {
 
 .header_illustration {
     width: 100%;
+    aspect-ratio: 663 / 464;
+    background-image: url("../images/image-product-mobile.jpg");
+    background-size: cover;
 }
 
 main {
     width: $standard-width;
     background: $clr-white;
-    padding: $standard-padding;
+    padding: $mobile-padding;
     border-radius: 0 0 $standard-border-radius $standard-border-radius;
 }
 
@@ -140,5 +146,31 @@ main {
     &:hover {
         background-color: $clr-green-700;
         cursor: pointer;
+    }
+}
+
+@media (min-width: 750px) {
+    body {
+        flex-direction: row;
+    }
+
+    header {
+        border-radius: $standard-border-radius 0 0 $standard-border-radius;
+        width: $desktop-width;
+        height: 26.375rem;
+        margin-top: 0;
+    }
+
+    .header_illustration {
+        background-image: url("../images/image-product-desktop.jpg");
+        background-size: cover;
+        object-fit: contain;
+        height: 100%;
+    }
+
+    main {
+        border-radius: 0 $standard-border-radius $standard-border-radius 0;
+        width: $desktop-width;
+        padding: $desktop-padding;
     }
 }
