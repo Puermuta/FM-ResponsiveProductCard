@@ -10,16 +10,21 @@ $clr-grey: hsl(228, 12%, 48%);
 $clr-cream: hsl(30, 38%, 92%);
 $clr-white: white;
 
-$fsz-s: 0.875rem;
+$fsz-s: 0.875rem; /* font size small */
+$fsz-l: 2rem; /* font size largre */
 
 $fw-primary: 500;
 $fw-accent: 700;
 
-$ff-primary: 'Monsterrat', sans-serif;
+$ff-primary: 'Montserrat', sans-serif;
 $ff-additional: 'Fraunces', serif;
 
+$line-height-primary: 1.5;
+$line-height-additional: 1;
+
 $standard-width: 21rem;
-$standard-padding: 1.5rem;
+$standard-padding: 1.4rem;
+$inbetween-margin: 1rem;
 $standard-border-radius: 0.75rem;
 $button-radius: 0.5rem;
 
@@ -49,6 +54,7 @@ body {
     font-weight: $fw-primary;
     color: $clr-grey;
     letter-spacing: 0;
+    line-height: $line-height-primary;
     
     background-color: $clr-cream;
 }
@@ -59,7 +65,6 @@ img {
 
 header {
     width: $standard-width;
-    border: 1px solid red;
     margin-top: 1.5rem;
     border-radius: $standard-border-radius $standard-border-radius 0 0;
     overflow: hidden;
@@ -76,12 +81,33 @@ main {
     border-radius: 0 0 $standard-border-radius $standard-border-radius;
 }
 
+.product_price {
+    display: flex;
+    align-items: center;
+    margin-top: $inbetween-margin;
+
+    color: $clr-green-500;
+    font-family: $ff-additional;
+    font-size: 2rem;
+
+    &:after {
+        content: attr(old_price);
+        text-decoration-line: line-through;
+        font-family: $ff-primary;
+        color: $clr-grey;
+        margin-left: 1rem;
+        font-size: $fsz-s;
+        font-weight: $fw-primary;
+    }
+}
+
 .add_to_cart {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     
+    margin-top: $inbetween-margin;
     padding-block: 1rem;
     width: 100%;
     border-radius: $button-radius;
@@ -91,4 +117,7 @@ main {
     color: $clr-white;
     background-color: $clr-green-500;
 
+    &:hover {
+        background-color: $clr-green-700;
+    }
 }

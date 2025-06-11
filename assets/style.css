@@ -2,7 +2,7 @@
 .fraunces {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
 }
@@ -10,12 +10,14 @@
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
 /*Primary colors*/
 /*Neutral colors*/
+/* font size small */
+/* font size largre */
 /* CSS-reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -36,11 +38,12 @@ body {
   display: grid;
   place-items: center;
   align-content: center;
-  font-family: "Monsterrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: hsl(228, 12%, 48%);
   letter-spacing: 0;
+  line-height: 1.5;
   background-color: hsl(30, 38%, 92%);
 }
 
@@ -50,7 +53,6 @@ img {
 
 header {
   width: 21rem;
-  border: 1px solid red;
   margin-top: 1.5rem;
   border-radius: 0.75rem 0.75rem 0 0;
   overflow: hidden;
@@ -63,8 +65,26 @@ header {
 main {
   width: 21rem;
   background: white;
-  padding: 1.5rem;
+  padding: 1.4rem;
   border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.product_price {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+}
+.product_price:after {
+  content: attr(old_price);
+  text-decoration-line: line-through;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  margin-left: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .add_to_cart {
@@ -72,6 +92,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  margin-top: 1rem;
   padding-block: 1rem;
   width: 100%;
   border-radius: 0.5rem;
@@ -79,4 +100,7 @@ main {
   font-weight: 700;
   color: white;
   background-color: hsl(158, 36%, 37%);
+}
+.add_to_cart:hover {
+  background-color: hsl(158, 42%, 18%);
 }/*# sourceMappingURL=style.css.map */
