@@ -69,6 +69,23 @@ main {
   border-radius: 0 0 0.75rem 0.75rem;
 }
 
+.product_type {
+  letter-spacing: 0.3rem;
+  font-size: 0.75rem;
+}
+
+.product_name {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.product_description {
+  margin-top: 1rem;
+}
+
 .product_price {
   display: flex;
   align-items: center;
@@ -103,4 +120,5 @@ main {
 }
 .add_to_cart:hover {
   background-color: hsl(158, 42%, 18%);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -10,6 +10,7 @@ $clr-grey: hsl(228, 12%, 48%);
 $clr-cream: hsl(30, 38%, 92%);
 $clr-white: white;
 
+$fsz-xs: 0.75rem;
 $fsz-s: 0.875rem; /* font size small */
 $fsz-l: 2rem; /* font size largre */
 
@@ -81,6 +82,25 @@ main {
     border-radius: 0 0 $standard-border-radius $standard-border-radius;
 }
 
+.product_type {
+    letter-spacing: 0.3rem;
+    font-size: $fsz-xs;
+}
+
+.product_name {
+    color: $clr-black;
+    
+    font-family: $ff-additional;
+    line-height: $line-height-additional;
+    font-size: $fsz-l;
+
+    margin-top: $inbetween-margin;
+}
+
+.product_description {
+    margin-top: $inbetween-margin;
+}
+
 .product_price {
     display: flex;
     align-items: center;
@@ -119,5 +139,6 @@ main {
 
     &:hover {
         background-color: $clr-green-700;
+        cursor: pointer;
     }
 }
